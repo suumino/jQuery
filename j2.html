@@ -1,0 +1,363 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+
+    <script>
+        $(function() {
+            $("<h3>제목</h3>").replaceAll("h2")
+            $("<p>").replaceWith("div")
+        })
+    </script>
+
+
+
+    <div class="box1">
+        <h2>내용1</h2>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div>
+
+    <div class="box2">
+        <h2>내용4</h2>
+        <p>내용5</p>
+        <p>내용6</p>
+    </div>
+
+    <div class="box3">
+        <h2>내용7</h2>
+        <p>내용8</p>
+        <p>내용9
+
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    <script>
+        $(function() {
+            var copyObj = $(".box1").children().clone();
+            console.log(copyObj);
+            $(".box3").append(copyObj);
+            $(".box2").remove();
+            $(".box3").empty();
+        })
+    </script>
+
+
+
+    <div class="box1">
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div>
+
+    <div class="box2">
+        <p>내용4</p>
+        <p>내용5</p>
+        <p>내용6</p>
+    </div>
+
+    <div class="box3">
+        <p>내용7</p>
+        <p>내용8</p>
+        <p>내용9
+
+        </p>
+    </div>
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+    <!-- <script>
+        $(function() {
+            $("#wrap p:eq(2)").after("<p>After</p>");
+            $("<p>insertAfter</p>").insertAfter("#wrap p:eq(1)");
+            $("#wrap p:eq(1)").before("<p>Before</p>");
+            $("<p>insertBefore</p>").insertBefore("#wrap p:eq(0)")
+            $("<p>내용4</p>").appendTo("#wrap");
+            $("#wrap").append("<p>내용5</p>");
+            $("<p>내용0</p>").prependTo("#wrap");
+            $("#wrap").prepend("<p>내용-1</p>");
+        })
+    </script>
+
+
+    <div id="wrap">
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div>
+ -->
+
+
+    <!-- <script>
+        $(function() {
+            var topNum = $("h1").offset().top;
+            $(window).scrollTop(topNum);
+            console.log(topNum);
+
+            var sct = $(window).scrollTop();
+            console.log(sct);
+        })
+        
+    </script>
+<style>
+    body {
+        line-height: 1;
+    }
+    #wrap {
+        height: 5000px;
+        padding-top: 2000px;
+    }
+</style>
+<div id="wrap">
+    <h1>위치 메서드</h1>
+
+</div> -->
+
+
+<!-- 
+
+    <script>
+        $(function() {
+            var $txt1 = $(".txt_1 span"), 
+                $txt2 = $(".txt_2 span"),
+                $box = $(".box");
+            var off_t = $box.offset().top;
+            var pos_t = $box.position().top;
+
+            $txt1.text(off_t);
+            $txt2.text(pos_t);
+        })
+    </script>
+<style>
+    #box_wrap {
+        width: 300px;
+        height: 200px;
+        margin: 50px;
+        position: relative;
+        background-color: #ccc;
+    }
+    .box {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 100px;
+        top: 50px;
+        background-color: #f00;
+    }
+</style>
+
+
+<div id="box_wrap">
+    <h1 class="box">박스</h1>
+</div>
+    <p class="txt_1">절대 top 위치값: <span></span></p>
+    <p class="txt_2">상대 top 위치값: <span></span></p>
+     -->
+
+
+    <!-- <script>
+        $(function() {
+            var w1 = $("#p1").width();
+            console.log(w1);
+
+            var w2 = $("#p1").innerWidth();
+            console.log(w2);
+
+            var w3 = $("#p1").outerWidth();
+            console.log(w3)
+
+            $("p2")
+            width:100;
+            height:100;
+        })
+    </script>
+
+    <style>
+        * {
+            padding: 0;
+        }
+
+        #p1,
+        #p2 {
+            height: 50px;
+            width: 100px;
+            padding: 20px;
+            border: 5px solid black;
+            background-color: yellowgreen;
+        }
+    </style>
+
+
+<h1>수치 조작</h1>
+<p id="p1">내용1</p>
+<p id="p2">내용2</p>
+ -->
+
+<!-- <script>
+    $(function() {
+        var result_1=$("#chk1").prop("checked")
+        console.log(result_1)
+
+        var result_2 = $("#chk2").prop("checked")
+        console.log(result_2)
+
+        var result_3 = $("#chk3").prop("checkd", true)
+        console.log(result_3)
+
+        var result_4 = $("#se_1").prop("selectedIndex");
+        console.log(result_4)
+
+        var result_5 = $("#se_1").prop("selectedIndex", 0);
+        console.log(result_5)
+    })
+</script>
+
+
+<form action="#" id="form_1">
+    <p>
+        <input type="checkbox" name="chk1" id="chk1">
+        <label for="chk1">chk1</label>
+        <input type="checkbox" name="chk2" id="chk2" checked>
+        <label for="chk2">chk2</label>
+        <input type="checkbox" name="chk3" id="chk3">
+        <label for="chk3">chk3</label>
+    </p>
+    <p>
+        <select name="se_1" id="se1">
+            <option value="opt1">option1</option>
+            <option value="opt2">option2</option>
+            <option value="opt3" selected>option3</option>
+        </select>
+    </p>
+</form>
+
+ -->
+
+<!-- <script>
+    $(function() {
+        var result_1 = $("#user_name").val();
+        console.log(result_1);
+
+        $("#user_id").val("javascript");
+        var result_2 = $("#user_id").prop("defalutValue");
+
+    })
+    
+</script>
+
+
+
+<form action="#" id="form_1">
+</form>
+<p>
+    <label for="user_name">이름</label><input type="text" name="user_name" id="user_name" value="용대리">
+</p>
+<p>
+    <label for="user_id">아이디</label><input type="text" name="user_id" id="user_id" value="Hello">
+</p> -->
+
+
+
+    <!-- <script>
+        $(function() {
+            $("#p1").addClass("aqua");
+            $("#p2").removeClass("red");
+            $("#p3").toggleClass("green");
+            $("#p4").toggleClass("green");
+            $("#p6").text($("p5").hasClass("yellow"));
+        })
+
+
+
+    </script>
+
+    
+    <style>
+        .aqua {
+            background-color: aqua;
+        }
+        .red {
+            background-color: red;
+        }
+        .green {
+            background-color: green;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+
+    <p id="p1">내용1</p>
+    <p id="p2" class="red">내용2</p>
+    <p id="p3">내용3</p>
+    <p id="p4" class="green">내용4</p>
+    <p id="p5" class="yellow">내용5</p>
+    <p id="p6">내용6</p>
+
+
+
+ -->
+
+
+<!-- 삭제
+<script>
+    $(function() {
+        $("#sec_1 p").html("");
+    
+        
+        $("#sec_2 h2").text("");
+    });
+</script> -->
+
+
+
+<!-- 변경
+<script>
+    $(function() {
+        var result_1 = $("#sec_1").html();
+        $("#sec_1 p").html("<a href=\"http://www.naver.com\">네이버</a>");
+    
+        var result_2 = $("#sec_2").text();
+        $("#sec_2 h2").text("text()");
+    });
+</script> -->
+
+<!-- <h1>
+    <strong>요소를 선택하고 변경 / 삭제 / 복제</strong>
+</h1>
+<section id="sec_1">
+    <h2><em>html()</em></h2>
+    <p>내용1</p>
+</section>
+<section id="sec_2">
+    <h2><em>텍스트()</em></h2>
+    <p>내용2</p>
+</section> -->
+
+
+</body>
+</html>

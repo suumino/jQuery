@@ -1,0 +1,194 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- 
+    1. 선택자 : HTML 요소를 선택하여 설정
+                CSS는 정적인 스타일 적용인 반면에 
+                jQuery는 동적으로 스타일 적용
+
+    HTML 문서의 트리형 구조
+    <h1>선호하는 음식</h1>
+    <section id = "food_1">
+        <h2>한식</h2>
+        <ul>
+            <li>김치</li>
+            <li>불고기</li>
+        </ul>
+    </section>
+
+    <section id = "food_2">
+        <h2>양식</h2>
+        <ul>
+            <li>피자</li>
+            <li>파스타</li>
+        </ul>
+    </section> -->
+
+        
+    <!-- 특정 id로 적용
+    <script>
+        $(function(){
+          $("#title").css("color", "red") 
+        });
+    </script>
+
+    <h1 id="title">제 목</h1>
+
+
+    전체에 적용
+    <script>
+        $(function(){
+          $("*").css("color", "green") 
+        });
+    </script>
+
+    <h1>제이쿼리</h1>
+    <h2>선택자</h2>
+    <h3>직접 선택자</h3>
+
+
+    특정 클래스에 적용
+    <script>
+        $(function(){
+          $(".tit").css("color", "blue") 
+        });
+    </script>
+
+
+    <h1>제이쿼리</h1>
+    <h2 class="tit">선택자</h2>
+    <h3>직접 선택자</h3>
+    <h4 class="tit">간접 선택자</h4>
+
+    특정 요소명(들)로 적용
+    <script>
+        $(function(){
+          $("h6").css("color", "red") 
+        });
+    </script>
+
+    <h6>배고파</h6>
+    <h5>엄마</h5>
+
+    여러 요소명(들)로 적용
+    <script>
+        $(function(){
+          $("h5, h6").css("color", "yello") 
+        });
+    </script>
+
+    <h6>배고파</h6>
+    <h5>엄마</h5> -->
+<!-- 
+    요소의 종속항목(클래스)에 적용
+    <script>
+        $(function(){
+          $("h2.tit").css("color", "blue") 
+        });
+    </script>
+
+
+    <h1>제이쿼리</h1>
+    <h2 class="tit">선택자</h2>
+    <h3>직접 선택자</h3>
+    <h4 class="tit">간접 선택자</h4>
+ -->
+ 
+    <!-- 특정 요소의 부모 선택
+    <script>
+        $(function(){
+          $("h2").parent().css("color", "blue") 
+        });
+    </script>
+    
+    <div id="wrap">
+        <div id="inner_wrap">
+            <h1>큰제목</h1>
+            <h2>작은제목</h2>
+            <p>내용1</p>
+            <p>내용</p>
+            <p>내용</p>
+        </div>
+    </div> -->
+<!-- 
+    <script>
+        $(function(){
+          $("#inner_wrap").children().css("color", "blue") 
+        });
+    </script>
+    
+    <div id="wrap">
+            <h1>큰제목</h1>
+            <h2>작은제목</h2>
+            <div id="inner_wrap">
+            <p>내용1</p>
+            <p>내용</p>
+            <p>내용</p>
+        </div>
+    </div> -->
+
+    <!-- 특정 요소의 전 전체 prevAll()
+    특정 요소의 다음 전체 nextAll() -->
+<!-- 
+    first / last 선택자
+
+    <script>
+        $(function(){
+          $("#menu li:first").css("color", "red") 
+          $("#menu li:last").css("color", "blue") 
+        });
+    </script>
+
+    <h1>선호하는 음식</h1>
+    <h2>한식</h2>
+    <ul id="menu">
+        <li>비빔밥</li>
+        <li>김치</li>
+        <li>불고기</li>
+        <li>떡갈비</li>
+    </ul>
+
+    even / odd 선택자
+
+    <script>
+        $(function(){
+          $("#food li:even").css("color", "red") 
+          $("#food li:odd").css("color", "blue") 
+        });
+    </script>
+
+    <h1>선호하는 음식</h1>
+    <h2>한식</h2>
+    <ul id="food">
+        <li>비빔밥</li>
+        <li>김치</li>
+        <li>불고기</li>
+        <li>떡갈비</li>
+    </ul> -->
+
+    eq(같은) / lt(적은) / gt(큰) 선택자
+
+    <script>
+        $(function(){
+          $("#menu li").eq(2).css("color", "red") 
+          $("#menu li:lt(2)").css("color", "blue")
+          $("#menu li:gt(2)").css("color", "green") 
+        });
+    </script>
+
+    <h1>선호하는 음식</h1>
+    <h2>한식</h2>
+    <ul id="menu">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+    </ul>
+
+
+
+</body>
+</html>

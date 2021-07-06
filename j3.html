@@ -1,0 +1,182 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<script>
+    $(function() {
+        $("#userid, #userpw").on("focus", function() {
+            $(this).css({
+                "background-color": "pink"
+            })
+        })
+        $("#userid, #userpw").on("blur", function() {
+            $(this).css({
+                "background-color": "white"
+            })
+        })
+
+
+    })
+</script>
+
+
+
+<form action="#">
+    <p>
+        <label for="userid">ID</label>
+        <input type="text" name="userid" id="userid">
+    </p>
+    <p>
+        <label for="userpw">PW</label>
+        <input type="text" name="userpw" id="userpw">
+    </p>
+</form>
+
+
+
+
+
+
+<!-- 
+
+<script>
+    $(function() {
+        $(".btn1").on("click", function() {
+            $(".txt1").css({
+                "background-color":"#ff0"
+            });
+        })
+        $(".btn2").on("click", function() {
+            $(".txt2").css({
+                "background-color":"#0ff"
+            });
+        })
+        $(".btn3").on("dblclick", function() {
+            $(".txt3").css({
+                "background-color":"0f0"
+            });
+        })
+
+    })
+    </script>
+
+
+    <p><button class="btn1">버튼</button></p>
+    <p class="txt1">내용1</p>
+    
+    <p><button class="btn2">버튼</button></p>
+    <p class="txt2">내용2</p>
+
+    <p><button class="btn3">버튼</button></p>
+    <p class="txt3">내용3</p>
+
+ -->
+
+
+
+
+
+<!-- ready() / load()
+
+<script>
+    $(function() {
+        $(document).ready(function() {
+            var h1 = $(".img1").height();
+            console.log("ready:", h1)
+        });
+        $(window).load(function() {
+            var h2 = $(".img1").height();
+            console.log("load:", h2);
+        })
+    })
+
+
+</script>
+
+<p>
+    <img src="data:image/jpeg;base64,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" class="img1">
+</p>
+
+
+
+
+
+
+
+ -->
+
+
+
+
+
+    <!-- <script>
+        $(function() {
+            $(".btn1").click(function() {
+                $(".btn1").parent().next().css({
+                    "color":"red"
+                });
+            }),
+            $(".btn2").on({
+                "mouseover focus": function() {
+                    $(".btn2").parent().next().css({
+                        "color":"blue"
+                    })
+                }
+        })
+        $(".btn1").click();
+        $(".btn2").trigger("mouseover");
+        
+        $(".btn1").off("click");
+        $(".btn2").off("mouseover focus");
+
+    })
+    </script>
+    
+    <p><button class="btn1">버튼</button></p>
+    <p>내용1</p>
+    
+    <p><button class="btn2">버튼</button></p>
+    <p>내용2</p> -->
+
+
+
+
+
+
+
+
+<!-- 
+<script>
+    $(function() {
+        $(".btn1").click(function() {
+            $(".btn1").parent().next().css({
+                "color":"red"
+            });
+        }),
+        $(".btn2").on({
+            "mouseover focus": function() {
+                $(".btn2").parent().next().css({
+                    "color":"blue"
+                })
+            },
+            "mouseout blur":function() {
+                $(".btn2").parent().next().css({
+                    "color":"black"
+                })
+            }
+    })
+})
+</script>
+
+<p><button class="btn1">버튼</button></p>
+<p>내용1</p>
+
+<p><button class="btn2">버튼</button></p>
+<p>내용2</p> -->
+
+
+
+</body>
+</html>
