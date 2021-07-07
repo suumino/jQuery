@@ -1,0 +1,52 @@
+
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    
+
+
+<script>
+   $(function() {
+       $(".btn1").on("click", function() {
+           $(".txt1").animate({
+               marginLeft:"500px",
+               fontSize:"30px"
+           },
+           2000, "linear", 
+           function() {
+               alert("움직임 완료")
+           })
+       })
+
+       $(".btn2").on("click", function() {
+           $(".txt2").animate({
+               marginLeft:"50px",
+               fontSize:"30px"
+           },
+           2000, "linear", 
+           function() {
+               alert("움직임 완료")
+           })
+       })
+
+
+   });
+</script>
+
+
+
+
+
+    <p><button class="btn1">크게이동</button></p>
+    <span class="txt1" style="background-color: aqua;">"500px"이동</span>
+    <p><button class="btn2">조금이동</button></p>
+    <span class="txt2" style="background-color: pink;">"50px"이동</span>
+
+    
+    
+    
+    
+    </body>
+    </html>

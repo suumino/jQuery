@@ -1,0 +1,116 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+
+
+
+    <script>
+        $(function() {
+            $(".btn1").on("mouseover", function() {
+                alert("HELLO!");
+            });
+            $(document).on("mouseover", ".btn2", function() {
+                alert("WELCOME!")
+            })
+            var btn2 = $("<p><button class=\"btn2\">버튼2</button></p>");
+            $("#wrap").append(btn2);
+
+            $(".del1").on("click", function() {
+                $(".btn1").off("mouseover");
+            })
+
+            $(".del2").on("click", function() {
+                $(document).off("mouseover", ".btn2");
+            })
+    
+
+        })
+    </script>
+    
+    
+    <div id="wrap">
+        <p><button class="btn1">버튼1</button></p>
+    </div>
+    <p><button class="del1">버튼1  이벤트 해제</button></p>
+    <p><button class="del2">버튼2  이벤트 해제</button></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script>
+    $(function() {
+        $(".btn1").on("mouseover focus", function() {
+            alert("HELLO!");
+        });
+        $(".btn1").addClass("on");
+
+        $(document).on("mouseover focus", "btn2.on", function() {
+            alert("WELCOME!");
+        })
+        $(".btn2").addClass("on");
+    })
+</script>
+
+
+<div id="wrap">
+    <p><button class="btn1">버튼1</button></p>
+    <p><button class="btn2">버튼2</button></p>
+</div>
+<p><button class="del1">버튼  이벤트 해제</button></p>
+ -->
+
+
+
+
+<!-- <script>
+    $(function() {
+        $(document).on("keydown", keyEventFnc);
+        function keyEventFnc(e) {
+            var direct = "";
+
+            switch (e.keyCode) {
+                case 37:
+                    direct = "LEFT"
+                    break;
+                case 38:
+                    direct = "TOP"
+                    break;
+                case 39:
+                    direct = "RIGHT"
+                    break;
+                case 40:
+                    direct = "BOTTOM"
+                    break;
+                case 65:
+                    direct = "A"
+                    break;
+                case 68:
+                    direct = "D"
+                    break;
+            }
+            if (direct) $("#userid").val(direct);
+        }
+    })
+</script>
+
+
+<p><input type="text" name="userid" id="userid"></p> -->
+
+
+</body>
+</html>

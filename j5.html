@@ -1,0 +1,85 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- 
+
+        $(function() {
+            $(".btn1").click(function() {
+                $(".btn1").parent().next().css({
+                    "color":"red"
+                });
+            }),
+            $(".btn2").on({
+                "mouseover focus": function() {
+                    $(".btn2").parent().next().css({
+                        "color":"blue"
+                    })
+                }
+        })
+        $(".btn1").click();
+        $(".btn2").trigger("mouseover");
+        
+        $(".btn1").off("click");
+        $(".btn2").off("mouseover focus");
+
+    }) -->
+
+
+
+
+
+
+<script>
+    $(function() { 
+        var baseFontsize = 14;
+
+        $(".zoomBtnZone button").on("click", zoomInOut);
+
+        function zoomInOut() {
+            if($(this).hasClass("zoomOut")) {
+                if (baseFontSize <= 8) return false;
+                baseFontSize--; 
+            } else if ($(this).hasClass("zoomIn")) {
+                if (baseFontSize >= 20) return false;
+                baseFontSize++;
+            } else if ($(this).hasClass("btn1")) {
+                $("*").css ({
+                    "color" : "red"
+                })
+            } else if ($(this).hasClass("btn2")) {
+                $("*").css ({
+                    "color" : "black"
+                })
+            } else {
+                baseFontSize = 14;
+            }
+            $(".fontSize").text(baseFontSize + "px")
+            $("body").css({
+                fontSize : baseFontSize + "px"
+            })
+        }
+    })
+</script>
+
+
+
+<p class="zoomBtnZone">
+<button class="zoomOut">-</button>
+<button class="origin">100%</button>
+<button class="zoomIn">+</button>
+<button class="btn1">글자색 변경</button>
+<button class="btn2">글자색 원래</button>
+</p>
+
+
+<p class="fontSize">14px</p>
+<div id="wrap">배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파ㅍ배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파</div>
+
+
+
+
+</body>
+</html>
